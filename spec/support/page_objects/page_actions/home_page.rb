@@ -34,10 +34,10 @@ module HomePage
     fill_in first_name_field, with: first_name
     fill_in last_name_field, with: last_name
 
-    { email: email, phone: phone }.each do |field, value|
+    [[email_field, email], [phone_field, phone]].each do |field, value|
       unless value.nil?
         click_button "Add #{field}"
-        fill_in field.to_s, with: value
+        fill_in field, with: value
       end
     end
     select location, from: client_location_dropdown
