@@ -1,4 +1,4 @@
-# Ruby-Capybara UI Automation Framework:
+# Ruby-Capybara UI Automation Framework
 
 This automation framework is based on Ruby using Capybara and RSpec. 
 
