@@ -6,6 +6,18 @@ It's following a Page Object Model structure where you can find the locator elem
 in the [page_objects](spec/support/page_objects) folder. The test can be found in [features/client_creation_spec.rb](spec/features/client_creation_spec.rb).
 
 ## Getting Started
+
+### Docker Execution
+To execute using Docker, first clone the repository
+```bash
+  docker pull atrejog/simple-practice
+```
+Once this is done, run the image indicating user email and password
+```bash
+  docker run -e LOGIN_EMAIL=user_email@example.com -e LOGIN_PASSWORD=user_password atrejog/simple-practice
+```
+
+### Local Execution
 To run locally, first you need to have Ruby installed.
 
 For Windows see: https://www.ruby-lang.org/en/documentation/installation/#winget or https://rubyinstaller.org/
@@ -22,9 +34,7 @@ locate in the repository root folder and execute the following command to instal
   cd ruby-capybara
   bundle install
 ```
-## Running Tests
 
-### Environment Variables
 To set the necessary environment variables, create a `.env` file in the repository root path and set the following variables:
 - **DRIVER** - The webdriver you will use. You can choose between `chrome` and `chrome_headless`
 - **LOGIN_EMAIL** - User email to log-in
@@ -34,9 +44,4 @@ To set the necessary environment variables, create a `.env` file in the reposito
 Once your .env file is ready, you can run the test
 ```bash
   rspec
-```
-
-**For Docker execution just run the image indicating user email and password. For example:**
-```bash
-  docker run -e LOGIN_EMAIL=user_email@example.com -e LOGIN_PASSWORD=user_password docker_image_name
 ```
