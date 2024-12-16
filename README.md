@@ -35,3 +35,8 @@ Once your .env file is ready, you can run the test
 ```bash
   rspec
 ```
+
+**For Docker execution just run the image indicating user email and password. For example:**
+```bash
+  docker run -e LOGIN_EMAIL=user_email@example.com -e LOGIN_PASSWORD=user_password docker_image_name
+```
