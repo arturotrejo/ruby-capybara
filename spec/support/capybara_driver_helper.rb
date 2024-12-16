@@ -28,5 +28,7 @@ else
   Capybara.default_driver = :selenium_chrome_headless
 end
 
-Capybara.page.driver.browser.manage.window.maximize
+unless ENV['DRIVER'] == 'docker_chrome_headless'
+  Capybara.page.driver.browser.manage.window.maximize
+end
 Capybara.app_host = ENV['URL']
