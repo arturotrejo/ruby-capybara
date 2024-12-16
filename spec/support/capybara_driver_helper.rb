@@ -1,4 +1,3 @@
-# Load Capybara and drivers
 require 'capybara/rspec'
 require 'selenium-webdriver'
 
