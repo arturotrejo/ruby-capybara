@@ -16,6 +16,7 @@ Once this is done, run the image indicating user email and password
 ```bash
   docker run -e LOGIN_EMAIL=user_email@example.com -e LOGIN_PASSWORD=user_password atrejog/simple-practice
 ```
+> Remember to use valid user credentials.
 
 ### Local Execution
 To run locally, first you need to have Ruby installed.
