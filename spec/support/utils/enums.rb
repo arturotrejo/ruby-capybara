@@ -12,9 +12,9 @@ module Enums
     clients:'Clients',
   }.freeze
 
-  SEARCH_TYPE = {
-    clients: 'Clients',
-    clients_and_contacts: 'Clients and contacts',
+  CLIENT_STATUS = {
+    all_clients: 'All clients',
+    contacts: 'Contacts',
   }.freeze
 
 end

@@ -6,15 +6,15 @@ module ClientsPage
   # @example
   #   search_user_in_clients('John Doe', SEARCH_TYPE[:clients])
   # @param text [String] The text to search for. It can be client name or phone.
-  # @param user_type [String] The type of user. Eg: Clients, Contacts, etc...
-  def search_user_in_clients(text, user_type)
+  # @param client_status [String] The type of user. Eg: Clients, Contacts, etc...
+  def search_user_in_clients(text, client_status)
     fill_in search_client_field, with: text
 
-    find(search_type_dropdown).click
-    wait_for_element user_type_options
-    within(user_type_options) do
-      click_button user_type
+    click_button client_status_label
+    wait_for_element client_status_options
+    within(client_status_options) do
+      check client_status
+      click_button apply_label
     end
   end
-
 end
